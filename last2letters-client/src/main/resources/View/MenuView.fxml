@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
+    <center>
+        <VBox fx:id="vBox" alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+            <HBox alignment="BASELINE_CENTER">
+               <children>
+                      <Label alignment="CENTER" text="Last" textAlignment="CENTER">
+                          <font>
+                              <Font size="52.0" />
+                          </font>
+                      </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="2" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="64.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Letters" textAlignment="CENTER">
+                     <font>
+                        <Font size="52.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+                <Button fx:id="btPlay" mnemonicParsing="false" onAction="#btPlay_Action" prefWidth="100.0" text="Play" />
+                <Button fx:id="btQuit" mnemonicParsing="false" onAction="#btQuit_Action" prefWidth="100.0" text="Quit" />
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

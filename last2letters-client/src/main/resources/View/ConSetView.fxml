@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="Controller.ConSetController">
+    <center>
+        <VBox fx:id="vBox" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+            <children>
+                <GridPane hgap="20.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0"
+                                           prefWidth="75.0"/>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="453.0" minWidth="10.0"
+                                           prefWidth="265.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <TextField fx:id="tfIp" promptText="127.0.0.1" text="localhost" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1"/>
+                        <TextField fx:id="tfPort" promptText="9090" text="9090" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="2"/>
+                        <Label text="IP Address" GridPane.rowIndex="1"/>
+                        <Label text="Port Number" GridPane.rowIndex="2"/>
+                        <Button fx:id="btCon" mnemonicParsing="false" onAction="#btCon_Action" prefHeight="25.0"
+                                prefWidth="80.0" text="Connect" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <Label text="User Name" GridPane.rowIndex="3"/>
+                        <TextField fx:id="tfUser" layoutX="205.0" layoutY="133.0" promptText="e.g. theGamer" text="user"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label text="Protocol"/>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.columnIndex="1">
+                            <children>
+                                <RadioButton fx:id="rBtnTCP" mnemonicParsing="false" text="TCP">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="GroupP"/>
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rBtnUDP" mnemonicParsing="false" selected="true" text="UDP"
+                                             toggleGroup="$GroupP"/>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets left="100.0" right="100.0" top="50.0"/>
+                    </padding>
+                </GridPane>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </VBox>
+    </center>
+</BorderPane>

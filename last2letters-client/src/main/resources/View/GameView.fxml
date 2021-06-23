@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GameController">
+    <center>
+        <VBox fx:id="vBox" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+            <HBox alignment="BASELINE_CENTER">
+               <children>
+                  <Label fx:id="lblTurn" text="It's your opponent's turn">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+                <ScrollPane fitToHeight="true" fitToWidth="true">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                    </padding>
+                    <content>
+                        <TextArea fx:id="taLog" editable="false" wrapText="true" />
+                    </content>
+                </ScrollPane>
+                <HBox fx:id="hBox" spacing="20.0">
+                    <children>
+                        <TextField fx:id="tfLog" disable="true" onAction="#tfLog_onEnter" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btLog" disable="true" mnemonicParsing="false" onAction="#btLog_Action" prefHeight="25.0" prefWidth="80.0" text="Log" />
+                    </children>
+                </HBox>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+</BorderPane>
